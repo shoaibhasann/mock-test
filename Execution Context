@@ -1,0 +1,39 @@
+Execution context is a fundamental concept in JavaScript that defines the environment in which code is executed. It consists of two main components: Variable Environment and Lexical Environment. These components, along with other important details, come together to form the execution context of a particular code block.
+
+The Variable Environment is responsible for storing variables and their values, as well as function declarations. It keeps track of all the variables and functions that have been declared within the code block. When a variable is assigned a value or a function is defined, it is stored in the Variable Environment.
+
+The Lexical Environment, on the other hand, handles scope and variable accessibility. It determines which variables and functions are accessible within a particular code block. Each time a new function is called, a new Lexical Environment is created, which inherits variables and functions from its parent Lexical Environment. This mechanism enables nested function calls to access variables from their parent scopes.
+
+To better understand how these components come together, let's illustrate a simple example with a diagram:
+
+```
+Code:
+function greet() {
+  let name = "John";
+  console.log("Hello, " + name + "!");
+}
+
+Execution Context Diagram:
+___________________________
+|   Variable Environment  |
+|_________________________|
+|                         |
+|  name: "John"           |
+|  greet: <function>      |
+|_________________________|
+
+___________________________
+|    Lexical Environment   |
+|_________________________|
+|                         |
+|  Outer Lexical Env: null|
+|_________________________|
+```
+
+In this example, we have a function called `greet()` that declares a variable `name` and logs a greeting to the console. The diagram represents the execution context of this `greet()` function.
+
+The Variable Environment contains two items: `name` with a value of "John", and `greet` representing the function itself. These variables are accessible within the `greet()` function.
+
+The Lexical Environment consists of two parts: the inner context and the outer context. In this case, the `greet()` function has no outer lexical environment, indicated by `null`. However, if `greet()` was defined inside another function, the outer lexical environment would reference that parent function's execution context.
+
+By maintaining separate Variable and Lexical Environments, JavaScript ensures that variables and functions are properly scoped and accessible within their respective execution contexts. It allows for proper encapsulation and prevents conflicts between different parts of the code.
