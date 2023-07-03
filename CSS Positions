@@ -1,0 +1,61 @@
+CSS Position Properties 
+
+
+The CSS position property is used to set position for an element. It is also used to place an element behind another and also useful for scripted animation effects.
+You can position an element using the top, bottom, left and right properties. These properties can be used only after the position property is set first. A position element's computed position property is relative, absolute, fixed or sticky.
+Let's have a look at following CSS positioning:
+CSS Static Positioning
+CSS Fixed Positioning
+CSS Relative Positioning
+CSS Absolute Positioning
+1) CSS Static Positioning
+This is a by default position for HTML elements. It always positions an element according to the normal flow of the page. It is not affected by the top, bottom, left and right properties.
+
+
+2) CSS Fixed Positioning
+The fixed positioning property helps to put the text fixed on the browser. This fixed test is positioned relative to the browser window, and doesn't move even when you scroll the window.
+div{
+    position: fixed;
+}
+
+
+3) CSS Relative Positioning
+The relative positioning property is used to set the element relative to its normal position. Element set to 0px from top respect to relative position.
+p{
+    position: relative;
+    top:0
+}
+
+
+
+
+4) CSS Absolute Positioning
+The absolute positioning is used to position an element relative to the first parent element that has a position other than static. If no such element is found, the containing block is HTML.
+With the absolute positioning, you can place an element anywhere on a page.
+In this example h1 has absolute position so h1 is placed 150px from the left and 250px from top of the page..
+h1{
+    position: absolute;
+    left: 150px;
+    top: 250px
+}
+
+
+
+
+
+
+5) CSS Sticky Positioning
+
+An element with a sticky position is positioned on the user's scroll position. 
+It is positioned relative until a given offset position is met in the viewport then it is stick to the top of the page like (position:fixed;)
+div{
+    position: sticky;
+    top:0;
+}
+
+
+
+
+
+
+
